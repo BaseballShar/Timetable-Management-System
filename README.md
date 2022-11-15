@@ -6,5 +6,5 @@ Work Distribution
 
 Role
 1. Gigi
-2. Baseball, York
+2. Baseball, Yorkk
 3. 
