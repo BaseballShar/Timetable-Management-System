@@ -5,6 +5,6 @@ Work Distribution
 3. Login Interface GUI (2 people)
 
 Role
-1. 
+1. Gigi
 2. Baseball, York
 3. 
