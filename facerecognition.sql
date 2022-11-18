@@ -45,7 +45,9 @@ CREATE TABLE `Student` (
 
 LOCK TABLES `Student` WRITE;
 /*!40000 ALTER TABLE `Student` DISABLE KEYS */;
-INSERT INTO `Student` VALUES (1, "JACK", NOW(), '2021-01-20', "shar@sharmail.sharcom.shar");
+INSERT INTO `Student` VALUES (1, "Jack", NOW(), '2022-11-19', "shar@sharmail.sharcom.shar");
+INSERT INTO `Student` VALUES (2, "Gigi", NOW(), '2022-11-19', "gigilee421@gmail.com");
+INSERT INTO `Student` VALUES (3, "York", NOW(), '2022-11-19', "yyorkchan@gmail.com");
 /*!40000 ALTER TABLE `Student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,12 +55,16 @@ UNLOCK TABLES;
 # Create TABLE 'Course'
 CREATE TABLE `Course` (
   `course_id` varchar(25) NOT NULL PRIMARY KEY,
-  `zoom_link` varchar(100) NOT NULL,
+  `zoom_link` varchar(500) NOT NULL,
   `teacher_msg` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `Course` WRITE;
-INSERT INTO `Course` VALUES ("COMP3278", "hi.zoom", "Please finish your asm");
+INSERT INTO `Course` VALUES ("COMP3230", "https://hku.zoom.us/j/95846973790?pwd=SmduZjhjVEZlQTZnbVVLblZEQXRwUT09", "Please finish your asm");
+INSERT INTO `Course` VALUES ("COMP3278", "https://hku.zoom.us/j/95846973790?pwd=SmduZjhjVEZlQTZnbVVLblZEQXRwUT09", "Please finish your report");
+INSERT INTO `Course` VALUES ("COMP3340", "https://hku.zoom.us/j/95846973790?pwd=SmduZjhjVEZlQTZnbVVLblZEQXRwUT09", "Please finish your training");
+INSERT INTO `Course` VALUES ("CCHU9021", "https://hku.zoom.us/j/95846973790?pwd=SmduZjhjVEZlQTZnbVVLblZEQXRwUT09", "Please correct your mistakes");
+INSERT INTO `Course` VALUES ("CENG9001", "https://hku.zoom.us/j/95846973790?pwd=SmduZjhjVEZlQTZnbVVLblZEQXRwUT09", "Please finish your presentation");
 UNLOCK TABLES;
 
 # Create TABLE 'Classroom'
@@ -69,6 +75,11 @@ CREATE TABLE `Classroom` (
 
 LOCK TABLES `Classroom` WRITE;
 INSERT INTO `Classroom` VALUES ("MTW2", "Ming Wah Complex 2");
+INSERT INTO `Classroom` VALUES ("CPD1.19", "Central Podium Level 1 Room 19");
+INSERT INTO `Classroom` VALUES ("CPDLG.01", "Central Podium Level LG Grand Hall");
+INSERT INTO `Classroom` VALUES ("KKLG109", "K. K. Leung Building Level LG Room 109");
+INSERT INTO `Classroom` VALUES ("CYCC501", "Yuet Ming Auditorium");
+INSERT INTO `Classroom` VALUES ("CYPP2", "Chong Yuet Ming Physics Building P2");
 UNLOCK TABLES;
 
 CREATE TABLE `Enrol` (
@@ -81,6 +92,14 @@ CREATE TABLE `Enrol` (
 
 LOCK TABLES `Enrol` WRITE;
 INSERT INTO `Enrol` VALUES (1, "COMP3278");
+INSERT INTO `Enrol` VALUES (2, "COMP3230");
+INSERT INTO `Enrol` VALUES (2, "COMP3340");
+INSERT INTO `Enrol` VALUES (2, "CCHU9021");
+INSERT INTO `Enrol` VALUES (2, "CENG9001");
+INSERT INTO `Enrol` VALUES (3, "COMP3278");
+INSERT INTO `Enrol` VALUES (3, "COMP3340");
+INSERT INTO `Enrol` VALUES (3, "CCHU9021");
+INSERT INTO `Enrol` VALUES (3, "CENG9001");
 UNLOCK TABLES;
 
 CREATE TABLE `TakePlace` (
@@ -92,7 +111,11 @@ CREATE TABLE `TakePlace` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `TakePlace` WRITE;
+INSERT INTO `TakePlace` VALUES ("CYPP2", "COMP3230");
 INSERT INTO `TakePlace` VALUES ("MTW2", "COMP3278");
+INSERT INTO `TakePlace` VALUES ("KKLG109", "COMP3340");
+INSERT INTO `TakePlace` VALUES ("CYCC501", "CCHU9021");
+INSERT INTO `TakePlace` VALUES ("MTW2", "CENG9001");
 UNLOCK TABLES;
 
 CREATE TABLE `ClassTime` (
@@ -105,7 +128,14 @@ CREATE TABLE `ClassTime` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `ClassTime` WRITE;
-INSERT INTO `ClassTime` VALUES ("COMP3278", "10:30", "12:30", "FRI");
+INSERT INTO `ClassTime` VALUES ("COMP3230", "12:30", "14:20", "TUE");
+INSERT INTO `ClassTime` VALUES ("COMP3230", "10:30", "12:20", "THU");
+INSERT INTO `ClassTime` VALUES ("COMP3278", "14:30", "15:20", "MON");
+INSERT INTO `ClassTime` VALUES ("COMP3278", "13:30", "15:20", "THU");
+INSERT INTO `ClassTime` VALUES ("COMP3340", "16:30", "18:20", "TUE");
+INSERT INTO `ClassTime` VALUES ("COMP3340", "17:30", "18:20", "FRI");
+INSERT INTO `ClassTime` VALUES ("CCHU9021", "14:30", "16:20", "WED");
+INSERT INTO `ClassTime` VALUES ("CENG9001", "10:30", "12:20", "TUE");
 UNLOCK TABLES;
 
 CREATE TABLE `CourseNote` (
@@ -116,7 +146,11 @@ CREATE TABLE `CourseNote` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `CourseNote` WRITE;
+INSERT INTO `CourseNote` VALUES ("COMP3230", "lecture1_note.com");
 INSERT INTO `CourseNote` VALUES ("COMP3278", "lecture1_note.com");
+INSERT INTO `CourseNote` VALUES ("COMP3340", "lecture1_note.com");
+INSERT INTO `CourseNote` VALUES ("CCHU9021", "lecture1_note.com");
+INSERT INTO `CourseNote` VALUES ("CENG9001", "lecture1_note.com");
 UNLOCK TABLES;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
