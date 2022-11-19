@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("hku.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.login-box{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 10px;
+    padding: 20px 50px;
+}
+
+.login-box h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+.login-box .input-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-35px);
+}
+
+.login-box .input-box .input-text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-box .input-box .input-text span{
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.login-box .input-box .input-text input{
+    border: 0;
+    padding: 6px;
+    border-bottom: 1px solid white;
+    background-color: #ffffff00;
+    color: #fff;
+}
+
+::placeholder{
+    color: white;
+    opacity: 1;
+}
+
+
+.login-box .input-box .input-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+    width: 145px;
+    height: 25px;
+    color: #fff;
+    background: linear-gradient(120deg, #646e85 0%, #7c5d5d 100%);
+    border-radius: 2px;
+    cursor: pointer;
+}

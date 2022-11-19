@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+    color: #333;
+    ;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(136, 136, 136, 0.4)
+}
+
+.courseHomeM_couseName{
+    display:flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 3em;
+    color: #222;
+}
+
+.courseHomeM_course_code {
+    font-size: 1.8em;
+    color: rgb(253, 163, 8);
+    margin-bottom: 1em;
+}
+
+.courseHomeM_course{
+    font-size: 1.4em;
+    margin-top: 40px;
+    padding: 4% 15%;
+    background-color: #ffffff;
+}
+
+.courseHomeM_course > * + * {
+    padding: 20px 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.courseHomeM_course_room {
+    display: flex;
+    justify-content: space-between;
+}
+
+.courseHomeM_course_time {
+    color:rgb(255, 82, 8);
+}
+
+.courseHomeM_course_msg > *:nth-child(1) {
+    margin-bottom: 1em;
+}

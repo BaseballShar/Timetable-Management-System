@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block head %}
+<meta http-equiv="refresh" content="3;url=/courseHome" />
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/welcome.css')}}"
+/>
+{% endblock %} {% block body %}
+<h2>Welcome, {{name}}</h2>
+<h2>Login At: {{date}} {{time}}</h2>
+<h2>Bringing You To Course Info Page</h2>
+<h2>....</h2>
+{%endblock %}

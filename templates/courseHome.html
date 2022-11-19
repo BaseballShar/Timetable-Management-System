@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/courseHome.css')}}"
+/>
+{% endblock %} {% block body %}
+<div class="courseHomeM">
+  <div class="courseHomeM_couseName">
+    <p>The Coming Course:</p>
+  </div>
+  <div class="courseHomeM_course">
+    <p class="courseHomeM_course_code">{{next_course[0]}}</p>
+    <p>
+      From <span class="courseHomeM_course_time">{{next_course[1]}}</span> to
+      <span class="courseHomeM_course_time">{{next_course[2]}}</span>
+    </p>
+
+    <div class="courseHomeM_course_room">
+      <p>Room ID: {{room_id}}</p>
+      <p>Location: {{address}}</p>
+    </div>
+    <p>
+      Zoom Link:
+      <a href="{{zoom_link}}" class="courseHomeM_course_link">{{zoom_link}}</a>
+    </p>
+    <p>
+      Course Link:
+      <a href="{{note_link}}" class="courseHomeM_course_link">{{note_link}}</a>
+    </p>
+    <div class="courseHomeM_course_msg">
+      <p>Teacher's message:</p>
+      <p>{{teacher_msg}}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

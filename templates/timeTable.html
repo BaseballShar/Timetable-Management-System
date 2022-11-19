@@ -1,0 +1,85 @@
+{% extends 'base.html' %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/timeTable.css')}}"
+/>
+{% endblock %} {% block body %}
+<div class="timeTableM">
+  <div class="timeTableM_title">
+    <p>Time Table:</p>
+  </div>
+  <div class="timeTableM_container">
+    <div class="timeTableM_days_container">
+      <div class="timeTableM_days">
+        <p class="timeTableM_days_name">MON</p>
+        <!-- course grid -->
+        {% for course in sort_student_Allcourses %} {% if course[3] == "MON" %}
+        <div class="timeTableM_days_courseGrid">
+          <p>{{course[0]}}</p>
+          <p>{{course[1]}}</p>
+          <p>-</p>
+          <p>{{course[2]}}</p>
+          <p>{{course[4]}}</p>
+        </div>
+        {% endif %} {% endfor %}
+      </div>
+
+      <div class="timeTableM_days">
+        <p class="timeTableM_days_name">TUE</p>
+        <!-- course grid -->
+        {% for course in sort_student_Allcourses %} {% if course[3] == "TUE" %}
+        <div class="timeTableM_days_courseGrid">
+          <p>{{course[0]}}</p>
+          <p>{{course[1]}}</p>
+          <p>-</p>
+          <p>{{course[2]}}</p>
+          <p>{{course[4]}}</p>
+        </div>
+        {% endif %} {% endfor %}
+      </div>
+
+      <div class="timeTableM_days">
+        <p class="timeTableM_days_name">WED</p>
+        <!-- course grid -->
+        {% for course in sort_student_Allcourses %} {% if course[3] == "WED" %}
+        <div class="timeTableM_days_courseGrid">
+          <p>{{course[0]}}</p>
+          <p>{{course[1]}}</p>
+          <p>-</p>
+          <p>{{course[2]}}</p>
+          <p>{{course[4]}}</p>
+        </div>
+        {% endif %} {% endfor %}
+      </div>
+
+      <div class="timeTableM_days">
+        <p class="timeTableM_days_name">THU</p>
+        <!-- course grid -->
+        {% for course in sort_student_Allcourses %} {% if course[3] == "THU" %}
+        <div class="timeTableM_days_courseGrid">
+          <p>{{course[0]}}</p>
+          <p>{{course[1]}}</p>
+          <p>-</p>
+          <p>{{course[2]}}</p>
+          <p>{{course[4]}}</p>
+        </div>
+        {% endif %} {% endfor %}
+      </div>
+
+      <div class="timeTableM_days">
+        <p class="timeTableM_days_name">FRI</p>
+        <!-- course grid -->
+        {% for course in sort_student_Allcourses %} {% if course[3] == "FRI" %}
+        <div class="timeTableM_days_courseGrid">
+          <p>{{course[0]}}</p>
+          <p>{{course[1]}}</p>
+          <p>-</p>
+          <p>{{course[2]}}</p>
+          <p>{{course[4]}}</p>
+        </div>
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

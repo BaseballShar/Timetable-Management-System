@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #ddd;
+}
+
+.camPMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.camPMain h1{
+    font-weight: 600;
+    color: rgb(45, 44, 44);
+}
+
+.camPMain img{
+    color: rgb(45, 44, 44);
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+.camPMain button{
+    margin-top: 20px;
+    width: 500px;
+    height: 3em;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 7px;
+}

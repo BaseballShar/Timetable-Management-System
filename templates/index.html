@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}">
+{% endblock %}
+
+{% block body %}
+
+    <script>
+        function subUsername(){
+            uname = document.getElementById("uname")
+
+            let data = new FormData()
+            data.append("name", uname.value)
+
+            fetch("/faceR",{
+                method: 'POST',
+                body: data,
+            }).then(
+                response => {
+                    window.location = response.url
+                }
+            )
+
+        }
+    </script>
+
+    <div class="login-box">
+        <h1>ICMS</h1>
+        <div class="input-box">
+            <div class ="input-text">
+                <span class='iconfont icon-mine'></span>
+                <input id = "uname" type="text" placeholder="Username"></input>
+            </div>
+            <div class="input-btn" onclick = "subUsername()">
+                Login
+            </div>
+        </div>
+    </div>
+{% endblock %}

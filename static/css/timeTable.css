@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color:rgba(136, 136, 136, 0.4);
+    color: #333;
+}
+
+.timeTableM_title{
+    display:flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 3em;
+    color: #222;
+}
+
+.timeTableM_container{
+    font-size: 1.4em;
+    margin-top: 60px;
+    padding: 4% 15%;
+    background-color: #ffffff;
+}
+
+.timeTableM_days_container {
+    display: flex;
+    width: 100%;
+}
+
+.timeTableM_days_container > * {
+    width: 8em;
+    flex: 1;
+}
+
+.timeTableM_days {
+    margin: 0 .3em;
+}
+
+.timeTableM_days_name {
+    color: rgb(255, 82, 8);
+    margin-bottom: 1em;
+}
+
+.timeTableM_days_courseGrid {
+    height: 7em;
+    padding: .5em;
+    background-color: rgba(253, 163, 8, .15);
+    border: 1px solid rgba(255, 82, 8, .35);;
+}
+
+.timeTableM_days_courseGrid + .timeTableM_days_courseGrid {
+    margin-top: .3em;
+}

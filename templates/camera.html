@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/campage.css')}}"
+/>
+{% endblock %} {% block body %}
+<div class="camPMain">
+  <div>
+    <i class="fa-regular fa-user-unlock"></i>
+    <h1>Face Recognizing</h1>
+  </div>
+  <img src="{{ url_for('video_feed')}}" />
+  <button onclick="location='/faceLogin'">Login</button>
+</div>
+{% endblock %}
