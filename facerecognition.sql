@@ -39,15 +39,16 @@ CREATE TABLE `Student` (
   `student_id` int NOT NULL PRIMARY KEY,
   `name` varchar(50) NOT NULL,
   `login_time` time NOT NULL,
+  `login_duration` int NOT NULL,
   `login_date` date NOT NULL,
   `email_address` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `Student` WRITE;
 /*!40000 ALTER TABLE `Student` DISABLE KEYS */;
-INSERT INTO `Student` VALUES (1, "Jack", NOW(), '2022-11-19', "shar@sharmail.sharcom.shar");
-INSERT INTO `Student` VALUES (2, "Gigi", NOW(), '2022-11-19', "gigilee421@gmail.com");
-INSERT INTO `Student` VALUES (3, "York", NOW(), '2022-11-19', "yyorkchan@gmail.com");
+INSERT INTO `Student` VALUES (1, "Jack", NOW(), 0, '2022-11-15', "shar@sharmail.sharcom.shar");
+INSERT INTO `Student` VALUES (2, "York", NOW(), 0,  '2022-11-15', "yyorkchan@gmail.com");
+INSERT INTO `Student` VALUES (3, "Gigi", NOW(), 0,  '2022-11-15', "gigilee421@gmail.com");
 /*!40000 ALTER TABLE `Student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,11 +93,11 @@ CREATE TABLE `Enrol` (
 
 LOCK TABLES `Enrol` WRITE;
 INSERT INTO `Enrol` VALUES (1, "COMP3278");
-INSERT INTO `Enrol` VALUES (2, "COMP3230");
+INSERT INTO `Enrol` VALUES (2, "COMP3278");
 INSERT INTO `Enrol` VALUES (2, "COMP3340");
 INSERT INTO `Enrol` VALUES (2, "CCHU9021");
 INSERT INTO `Enrol` VALUES (2, "CENG9001");
-INSERT INTO `Enrol` VALUES (3, "COMP3278");
+INSERT INTO `Enrol` VALUES (3, "COMP3230");
 INSERT INTO `Enrol` VALUES (3, "COMP3340");
 INSERT INTO `Enrol` VALUES (3, "CCHU9021");
 INSERT INTO `Enrol` VALUES (3, "CENG9001");
@@ -128,9 +129,9 @@ CREATE TABLE `ClassTime` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `ClassTime` WRITE;
-INSERT INTO `ClassTime` VALUES ("COMP3230", "12:30", "14:20", "TUE");
 INSERT INTO `ClassTime` VALUES ("COMP3230", "10:30", "12:20", "THU");
-INSERT INTO `ClassTime` VALUES ("COMP3278", "14:30", "15:20", "MON");
+INSERT INTO `ClassTime` VALUES ("COMP3230", "14:30", "15:20", "MON");
+INSERT INTO `ClassTime` VALUES ("COMP3278", "12:30", "14:20", "TUE");
 INSERT INTO `ClassTime` VALUES ("COMP3278", "13:30", "15:20", "THU");
 INSERT INTO `ClassTime` VALUES ("COMP3340", "16:30", "18:20", "TUE");
 INSERT INTO `ClassTime` VALUES ("COMP3340", "17:30", "18:20", "FRI");
@@ -146,11 +147,11 @@ CREATE TABLE `CourseNote` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `CourseNote` WRITE;
-INSERT INTO `CourseNote` VALUES ("COMP3230", "lecture1_note.com");
-INSERT INTO `CourseNote` VALUES ("COMP3278", "lecture1_note.com");
-INSERT INTO `CourseNote` VALUES ("COMP3340", "lecture1_note.com");
-INSERT INTO `CourseNote` VALUES ("CCHU9021", "lecture1_note.com");
-INSERT INTO `CourseNote` VALUES ("CENG9001", "lecture1_note.com");
+INSERT INTO `CourseNote` VALUES ("COMP3230", "3230_note.com");
+INSERT INTO `CourseNote` VALUES ("COMP3278", "3278_note.com");
+INSERT INTO `CourseNote` VALUES ("COMP3340", "3340_note.com");
+INSERT INTO `CourseNote` VALUES ("CCHU9021", "9021_note.com");
+INSERT INTO `CourseNote` VALUES ("CENG9001", "9001_note.com");
 UNLOCK TABLES;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
